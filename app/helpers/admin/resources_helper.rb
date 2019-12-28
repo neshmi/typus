@@ -1,6 +1,6 @@
 module Admin::ResourcesHelper
 
-  def admin_search(resource = @resource, params = params)
+  def admin_search(resource = @resource, params = request.params)
     if (typus_search = resource.typus_defaults_for(:search)) && typus_search.any?
 
       hidden_filters = params.dup
